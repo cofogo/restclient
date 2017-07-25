@@ -1,0 +1,96 @@
+		*** sending get request ***
+
+*
+*** response code ***
+*
+200
+************************
+*** response headers ***
+************************
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Origin: *
+Connection: keep-alive
+Content-Length: 234
+Content-Type: application/json
+Date: Tue, 25 Jul 2017 19:36:37 GMT
+HTTP/1.1 200 OK: present
+Server: meinheld/0.6.1
+Via: 1.1 vegur
+X-Powered-By: Flask
+X-Processed-Time: 0.00108599662781
+*********************
+*** response body ***
+*********************
+{
+  "args": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Connection": "close", 
+    "Host": "httpbin.org", 
+    "User-Agent": "restclient-cpp/0.4.4-24-g8af5b2a"
+  }, 
+  "origin": "5.20.158.90", 
+  "url": "https://httpbin.org/get"
+}
+
+***********************
+*** end of response ***
+***********************
+
+type in a string you want to send to the service
+or type in 'q' to quit
+>my data string with spaces
+
+
+		*** sending data to /put ***
+
+*
+*** response code ***
+*
+200
+************************
+*** response headers ***
+************************
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Origin: *
+Connection: keep-alive
+Content-Length: 418
+Content-Type: application/json
+Date: Tue, 25 Jul 2017 19:36:57 GMT
+HTTP/1.1 100 Continue: present
+HTTP/1.1 200 OK: present
+Server: meinheld/0.6.1
+Via: 1.1 vegur
+X-Powered-By: Flask
+X-Processed-Time: 0.00134611129761
+*********************
+*** response body ***
+*********************
+{
+  "args": {}, 
+  "data": "my data string with spaces", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Connection": "close", 
+    "Content-Length": "26", 
+    "Content-Type": "text/plain", 
+    "Expect": "100-continue", 
+    "Host": "httpbin.org", 
+    "User-Agent": "restclient-cpp/0.4.4-24-g8af5b2a"
+  }, 
+  "json": null, 
+  "origin": "5.20.158.90", 
+  "url": "https://httpbin.org/put"
+}
+
+***********************
+*** end of response ***
+***********************
+
+type in a string you want to send to the service
+or type in 'q' to quit
+>q
+application will now exit.
+Have a good day!

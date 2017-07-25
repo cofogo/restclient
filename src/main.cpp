@@ -1,6 +1,9 @@
 #include <iostream>
 using std::cout;
 using std::endl;
+using std::cin;
+#include <string>
+using std::string;
 
 //3rd party libs
 #include "restclient-cpp/restclient.h"
@@ -17,13 +20,25 @@ int main()
     r = RestClient::get("https://httpbin.org/get");
 
     print_resp(r);
-    
-    //set
-    cout << "\n\n";
-    cout << "\t\t*** sending data to /put ***\n";
-    r = RestClient::put("https://httpbin.org/put", "text/plain", "this is the plain text we are sending ;)");
 
-    print_resp(r);
+    string data_str = "";
+    while(data_str != "quit" && data_str != "q") {
+        cout << "\ntype in a string you want to send to the service\n";
+        cout << "or type in 'q' to quit\n>";
+
+        char data_cstr[512];
+        cin.getline(data_cstr, sizeof(data_cstr));
+        data_str = data_cstr;
+
+        if(data_str == "q") {break;}
+
+        //set
+        cout << "\n\n";
+        cout << "\t\t*** sending data to /put ***\n";
+        r = RestClient::put("https://httpbin.org/put", "text/plain", data_str);
+
+        print_resp(r);
+    }
     
     cout << "application will now exit.\nHave a good day!\n";
 
